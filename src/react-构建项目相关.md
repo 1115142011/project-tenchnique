@@ -75,3 +75,11 @@ class Dialog extends Component{
 }
 export default cssModule(Dialog,styles)
 ```
+### react-addons-perf react 官方提供的的性能检测插件，因内置Date对象获取时间是异步的，用Date对象来记录性能耗时并不可靠
+```js
+import Perf from 'react-addons-perf'
+/* 记录渲染开始时间点 */
+Perf.start()
+render()
+/*记录结束时间点 */
+Perf.end()
