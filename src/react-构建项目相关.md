@@ -83,3 +83,8 @@ Perf.start()
 render()
 /*记录结束时间点 */
 Perf.end()
+```
+### 动画库
+- react-smooth
+- svg 线条动画 vivus.js
+- react css transition
