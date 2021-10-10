@@ -44,3 +44,15 @@ function (exports,require,module,_dirname,_filename){
 )
 // 代码会在vm 原生模块的runInThisContext()中执行，类似于eval 函数 具有明确的上下文环境，不会污染全局
 ```
+### AMD 模块定义
+- AMD 其实是commjs 规范的延申，其不同之处在于余姚使用 define 函数明确定义一个模块
+  ```js
+  function define(id, dependencies,factory){
+     var exports = {}
+     exports.key = function (){}
+     return exports
+  }
+
+  // 其中factory 为实际的模块代码,内容需要返回的方式实现导出
+ 
+  ```
