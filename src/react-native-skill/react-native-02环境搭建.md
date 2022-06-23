@@ -53,3 +53,79 @@
 14. react-native 中的颜色支持 rgb() rgba() hsl() hsla()
 
 15. Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化构建开源工具。它使用一种基于Groovy的特定领域语言(DSL)来声明项目设置，抛弃了基于XML的各种繁琐配置。
+
+
+### macOS
+
+- brew安装 wacthman 时报错 `fatal: not in a git directory`
+```js
+// 运行命令 brew doctor 
+// 然后执行提示的命令 
+```
+-  mac m1 芯片默认 brew 安装目录是在 `/opt/`下
+ ```js
+ /opt/homebrew/bin is not in your PATH.
+  Instructions on how to configure your shell for Homebrew
+  can be found in the 'Next steps' section below.
+  // 需要设置环境变量
+  // echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/painter/.zprofile
+  // eval "$(/opt/homebrew/bin/brew shellenv)"
+
+ ```
+- 我在安装 brew 之前安装了 node 运行 brew 时 警告
+```js
+/*
+Warning: Unbrewed header files were found in /usr/local/include.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+*/
+```
+
+- brew 设置淘宝镜像 taobao 镜像设置完成后不要运行 brew update 命令 该命令会导致 nvm 管关联配置丢失
+```js
+/*
+cd "$(brew --repo)"
+ 
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+ 
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+ 
+git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
+ 
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' >> ~/.bash_profile
+source ~/.bash_profile
+*/
+```
+- brew 安装nvm 时报出警告 需要将 nvm 与 shell 关联
+```js
+/*
+   Please note that upstream has asked us to make explicit managing
+nvm via Homebrew is unsupported by them and you should check any
+problems against the standard nvm install method prior to reporting.
+
+You should create NVM's working directory if it doesn't exist:
+
+  mkdir ~/.nvm
+
+Add the following to ~/.zshrc or your desired shell
+configuration file:
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+*/
+
+解决方式如下
+/*
+$ echo "source $(brew --prefix nvm)/nvm.sh" >> .bash_profile
+$ . ~/.bash_profile
+$ nvm --version #查看nvm版本
+*/
+```
+
+
+-  react-native 项目名称不能有特殊字符如 `-`
+
+-  在初始化项目中遇到了 watchman 不能工作的问题 采取的是降低 react-native 版本解决的 环境配置上未发现明显的问题，后续会继续探索
+
+
