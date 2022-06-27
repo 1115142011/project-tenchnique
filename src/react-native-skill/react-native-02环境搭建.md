@@ -128,4 +128,11 @@ $ nvm --version #查看nvm版本
 
 -  在初始化项目中遇到了 watchman 不能工作的问题 采取的是降低 react-native 版本解决的 环境配置上未发现明显的问题，后续会继续探索
 
+### mac m1 遇到项目无法启动 watchman 错误提示为watchman 没有权限
+##### 原因是因为我把native 项目目录创建载 desktop 文件夹下，因此无法启动 watchman;原因推测如下
+1. m1 芯片的架构与inter架构不同 desktop 下无法添加到watchman 监控
+2. watchman 包版本---因从头开始搭建的环境，watchman 是最新的版本
+3. 和 homebrew 版本相关 ，我下载的homebrew 是针对m1 优化的版本 -- homebrew 的安装目录在 /opt/** 而非在 /usr/local/* 下  
+
+
 
