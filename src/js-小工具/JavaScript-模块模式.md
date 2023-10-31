@@ -17,4 +17,12 @@
 
 })(myModule||{})
 
+// 服务端异步调用主要是使用回调函数的形式--在javascript 中函数可以作为参数传递给其他函数
+
+function getJSON('addressurl',(success)=>{
+// do success some work
+},(err)=>{
+// when erroe do some work
+})
+
 ```
