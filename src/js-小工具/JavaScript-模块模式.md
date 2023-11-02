@@ -26,3 +26,49 @@ function getJSON('addressurl',(success)=>{
 })
 
 ```
+
+#### 什么是控制流
+
+- 程序为实现业务目标所要行进的路径称之为控制流
+
+```js
+// 模拟数组的 map 方法
+function _map(arr, fn) {
+  let idx = 0;
+  let len = arr.length;
+  let result = new Array(len);
+  while (idx < len) {
+    result[idx] = fn(arr[idx], idx, arr);
+    idx++;
+  }
+  return result;
+}
+
+// 模拟数组的 reduce 方法
+
+function _reduce(arr, fn, accumulator) {
+  let idx = -1;
+  if (!accumulator && arr.length > 0) {
+    accumulator = arr[++idx];
+  }
+  while (++idx < arr.length) {
+    fn(accumulator, arr[idx], arr);
+  }
+  return accumulator;
+}
+
+// 模拟数组的filter 方法
+
+function _filter(arr, fn) {
+  let idx = 0;
+  let result = [];
+
+  while (idx < arr.length) {
+    if (fn(arr[idx], idx, arr)) {
+      result.push(arr[idx]);
+    }
+    idx++;
+  }
+  return result;
+}
+```
