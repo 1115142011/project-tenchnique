@@ -2,3 +2,4 @@
 2. map 是以可以 value 的方式存储数据 
 3. bean 配置文件向ioc 容器描述如何装配对象
 4. ioc 实现bean 的装配是使用 BeanFactory + 反射机制实现的
+5. ioc 管理对象的创建和初始化管理-最终得到可以使用的对象（）context.getBean("ClassName")
