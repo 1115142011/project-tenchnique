@@ -107,3 +107,23 @@ public class TestTool {
 5. @Autowried 更具类型自动装配 （默认是byType）
 6. @Resource 时java JDK 扩展包的内容-- 根据名称查找，@Resource(name="实现类名称")，@Resource 属性名与需要注入的类保持一致；
 7. @Resource 既未写名称，属性名也没有与需要注入的类保持一致，会根据类型去查找
+#### java web
+1. 数字类型的数据转换为字符串类型 调用 String 类的 valueOf 方法
+2. java 小数精确运算 使用 bigDecimal 类
+3. String.matches 正则匹配
+4. matches 默认是从开始匹配到结尾
+5. date.getTime 获取的是毫秒值 时间比较需要将时间对象转换为 毫秒数才可以直接比较
+6. 单列集合，每次添加数据的时候金能添加1个数据
+7. 集合的顶层对象是 collection
+8. list 有序--> 有序-> 存和取的顺序是一致的
+9. 迭代器不依赖索引
+10. maven java 构建工具
+11. maven 项目中 targe 存编后的字节码文件
+12. 生命周期三大阶段 1.clear 2.default 3.install 
+13. maven 所有的生命周期都是有绑定的插件执行的
+14. springboot 快速构建spring 项目
+15. spring framework 项目基础
+16. spring --->全家桶（开发生态圈）
+17. spring 是基于基础框架 springFramework 
+18. springboot 简化后端程序的开发步骤，-->springBoot 贯穿项目始终
+19. web服务器 tomcat
