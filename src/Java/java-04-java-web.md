@@ -1,0 +1,16 @@
+- controller 层核心职责就是接收请求->设置响应
+- 在java 项目中 resource 是在 classpath 目录下
+- 获取类加载器。this.getClass().getClassLoader().getResourec("classpath")->加载资源文件
+- 后端项目一般都是三层架构 1.controller 层：接收请求->设置响应 2.Service层：业务逻辑处理 3.Dao层：数据访问
+- Dao 层的处理结果->service层->controller 层
+- spring 依赖注入 1.字段注入（@Autowrite 直接标注到字段上） 2.设值注入（需要有对应的set 方法） 3.构造注入
+- @ComponentScan 默认启动类当前包及其子包
+- 显示的使用@ComponentScan 会覆盖默认的 spring bean 扫描规则
+- @SpringBootApplication 具备 @ComponentScan 的功效
+- macos 启动 mysql 首先是 sudo /usr/local/mysql/support-files/mysql.server start 命令此时输入的密码是电脑的锁屏密码
+- 关系型数据库 多张相互连接的二维表组成
+- sql语句是操纵关系型数据库的标准语句
+- redis 非关系型数据库
+- sql 语句也是以分号结尾的
+- sql 语句不区分大小写的
+- 命令 ： show databases -->查看数据库；
