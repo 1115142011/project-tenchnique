@@ -14,3 +14,9 @@
 - sql 语句也是以分号结尾的
 - sql 语句不区分大小写的
 - 命令 ： show databases -->查看数据库；
+- lombok @Data 自动生成 getter setter 方法
+
+- mybatis 预编译sql 语句
+- mybatis 占位符 # -->预编译的占位符,$ sql 拼接语句 --> 有sql 注入的f风险
+- mybatis @options 注解表示期待返回值--回写入params 实体
+- mybatis 开启驼峰命名自动映射
