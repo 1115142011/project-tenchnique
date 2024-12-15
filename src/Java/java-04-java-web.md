@@ -90,3 +90,4 @@ public class ExampleAspet {
 ```
 - annotation 注解的方式定义切入点表达式。--：表示，特定注解的方法作为切入点 @before(注解类)。
 - 连接点 ---> 表示aop 控制的方法
+- jwt 令牌 JSON web token
